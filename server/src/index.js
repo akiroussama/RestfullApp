@@ -3,8 +3,10 @@ const dataSource = require("./utils").dataSource;
 const wilderController = require("./controller/wilder");
 const skillController = require("./controller/skill");
 
-const app = express();
+var cors = require('cors')
+var app = express()
 
+app.use(cors())
 app.use(express.json());
 
 app.get("/", (req, res) => {
